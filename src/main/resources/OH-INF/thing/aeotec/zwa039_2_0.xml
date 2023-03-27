@@ -50,8 +50,14 @@ Temperature and Humidity Sensor<br /> <h1>Overview</h1><p>Small sensor that offe
           <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=POWER_MANAGEMENT</property>
         </properties>
       </channel>
-      <channel id="alarm_general" typeId="alarm_general">
-        <label>Alarm (weather)</label>
+      <channel id="alarm_cold" typeId="alarm_cold">
+        <label>Alarm (cold)</label>
+        <properties>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=HEAT</property>
+        </properties>
+      </channel>
+      <channel id="alarm_humidity" typeId="alarm_humidity">
+        <label>Alarm (moisture)</label>
         <properties>
           <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=WEATHER</property>
         </properties>

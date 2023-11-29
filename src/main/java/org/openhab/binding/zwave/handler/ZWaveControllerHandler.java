@@ -336,7 +336,7 @@ public abstract class ZWaveControllerHandler extends BaseBridgeHandler implement
                 } else if (cfg[1].equals("inclusiontimeout") && value instanceof BigDecimal) {
                     reinitialise = true;
                 } else if (cfg[1].equals("maxawakeperiod") && value instanceof BigDecimal) {
-                    controller.updateControllerProperty(((BigDecimal) value).intValue());                   
+                    controller.updateControllerProperty(((BigDecimal) value).intValue());
                 }
             }
             if ("security".equals(cfg[0])) {
@@ -503,7 +503,7 @@ public abstract class ZWaveControllerHandler extends BaseBridgeHandler implement
         }
 
         if (controller == null) {
-            logger.info("Attempting to add listener when controller is null");
+            logger.debug("Attempting to add listener when controller is null");
             return false;
         }
         controller.addEventListener(listener);
